@@ -214,7 +214,7 @@ class Datadog(object):
             self.api_response.raise_for_status()
             self.__log.info('API Response OK')
         except requests.exceptions.HTTPError as e:
-            self.__log.exception('Exception: {} \n Args: {}'.format(e, e.args))
+            self.__log.exception('Exception: {}'.format(e))
             raise e
 
 
