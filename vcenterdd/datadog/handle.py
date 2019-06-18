@@ -166,7 +166,6 @@ class Datadog(object):
                                  "See documentation at https://docs.datadoghq.com/api/?lang=bash#post-timeseries-points")
             url = "{}{}".format(self.datadog_base_url, 'series?api_key={}'.format(self._get_api_key()))
             self.api_response = self.session.post(url=url, data=json_data)
-
             self.validate_api_response()
 
         except BaseException as e:
